@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+.dashboard {
+  min-height: 100vh;
+  padding: 4rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard_content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(1, minmax(300px, 330px));
+}
+.dashboard_person {
+  width: 100%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12%;
+}
+.info-card {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 12%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.info-card_photo {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.info-card_subtitle {
+  font-weight: 300;
+  margin: 0;
+  font-size: 12px;
+}
+.info-card_title {
+  font-weight: 300;
+  margin: 0.5rem 0 0;
+}
+.view-selector {
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.view-selector_item {
+  font-size: 12px;
+  color: hsl(236, 100%, 87%);
+  cursor: pointer;
+}
+.view-selector_item:hover,
+.view-selector_item--activ {
+  color: #fff;
+}
+.dashboard_item {
+  width: 100%;
+  padding-top: 2.15rem;
+  background-color: #fff;
+  border-radius: 12%;
+  background-repeat: no-repeat;
+  background-position: 92% -8%;
+}
+.dashboard_item--work {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url(images/icon-work.svg);
+}
+.dashboard_item--play {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url(images/icon-play.svg);
+}
+.dashboard_item--study {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url(images/icon-study.svg);
+}
+.dashboard_item--exercise {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url(images/icon-exercise.svg);
+}
+.dashboard_item--social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url(images/icon-social.svg);
+}
+.dashboard_item--self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url(images/icon-self-care.svg);
+}
+.tracking-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12%;
+  padding: 1.25rem;
+  position: relative;
+  bottom: -2px;
+}
+.tracking-card_header,
+.tracking-card_body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tracking-card_header {
+  margin-bottom: 1rem;
+}
+.tracking-card_menu {
+  cursor: pointer;
+}
+.tracking-card_title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+.tracking-card_time {
+  font-size: 32px;
+  font-weight: 300;
+}
+.tracking-card_prev-period {
+  font-weight: 300;
+  font-size: 12px;
+  color: hsl(236, 100%, 87%);
+}
+.dashboard_item:hover .tracking-card {
+  background-color: hsl(246, 80%, 60%);
+}
+@media (min-width: 1024px) {
+  .dashboard_content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .dashboard_person {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+  .info-card_photo {
+    margin-bottom: 1.5rem;
+  }
+  .info-card_title {
+    font-size: 30px;
+  }
+  .view-selector {
+    flex-direction: column;
+  }
+  .view-selector_item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .tracking-card_body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tracking-card_time {
+    margin-bottom: 0.75rem;
+    font-size: 48px;
+  }
+  .tracking-card_header {
+    margin-bottom: 0.75rem;
+  }
+}
